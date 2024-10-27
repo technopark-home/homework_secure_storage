@@ -14,4 +14,16 @@
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="register_now">Register Now</string>
     <string name="already_have_an_account_login_now">Already have an account? <b>Login Now</b></string>
+    <string name="register_biometric">Registration biometric</string>
+    <string name="use_biometrics">Use biometrics</string>
+    <string name="enable_biometric_login">Enable biometric login</string>
+    <string name="cancel_registration">Cancel registration</string>
+    <string name="biometric_prompt_title_text">Biometric Authentication</string>
+    <string name="biometric_prompt_subtitle_text">Input your biometry</string>
+    <string name="biometric_prompt_description_text">We need your finger</string>
+    <string name="biometric_prompt_use_password_instead_text">Use app password</string>
+    <string name="delete_biometric">Delete biometric</string>
+    <string name="cancel">Cancel</string>
+    <string name="registration_biometric">Registration Biometric</string>
+    <string name="authenticate_using_your_biometric_credential">Authenticate using your biometric credential</string>
 </resources>

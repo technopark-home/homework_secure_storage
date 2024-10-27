@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.auth.LoginFragment">
+    tools:context=".presentation.auth.RegisterBiometricFragment">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
@@ -71,68 +72,34 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/login"
+        android:layout_marginTop="16dp"
+        android:text="@string/enable_biometric_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clear_biometrics"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         style="@style/ButtonPrimary" />
 
-    <TextView
-        android:id="@+id/textViewForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/forgot_your_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/use_biometrics"
-        style="@style/TextDefault" />
-
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/use_biometrics"
+        android:id="@+id/cancel_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="32dp"
-        android:text="@string/use_biometrics"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0000EE"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/clear_biometrics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/delete_biometric"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0000EE"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/use_biometrics" />
-
-    <TextView
-        android:id="@+id/textViewRegisterNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="@string/don_t_have_an_account_register_now"
+        android:text="@string/cancel_registration"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0000EE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/TextDefault" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressbar"

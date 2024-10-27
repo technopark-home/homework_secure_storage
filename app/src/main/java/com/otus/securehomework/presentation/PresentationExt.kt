@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.otus.securehomework.R
 import com.otus.securehomework.data.Response
 import com.otus.securehomework.presentation.auth.LoginFragment
+import com.otus.securehomework.presentation.auth.RegisterBiometricFragment
 import com.otus.securehomework.presentation.home.HomeActivity
 import kotlinx.coroutines.launch
 
@@ -59,7 +60,7 @@ fun Fragment.handleApiError(
             retry
         )
         failure.errorCode == 401 -> {
-            if (this is LoginFragment) {
+            if (this is LoginFragment || this is RegisterBiometricFragment) {
                 requireView().snackbar(R.string.error_enter)
             } else {
                 logout()

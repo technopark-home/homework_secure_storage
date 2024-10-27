@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.otus.securehomework.R
-import com.otus.securehomework.databinding.FragmentLoginBinding
 import com.otus.securehomework.databinding.FragmentRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
 
