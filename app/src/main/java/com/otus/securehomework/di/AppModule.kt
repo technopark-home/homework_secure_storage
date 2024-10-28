@@ -19,7 +19,10 @@ import com.otus.securehomework.protection.BiometricPreferences
 import com.otus.securehomework.protection.CIPHER_AES_BIOMETRIC
 import com.otus.securehomework.protection.CipherManager
 import com.otus.securehomework.protection.IAesKey
+import com.otus.securehomework.protection.IGeneratorParameterSpecRSA
 import com.otus.securehomework.protection.PREF_BIOMETRIC
+import com.otus.securehomework.protection.RSAGenEncryptSpecImpl
+import com.otus.securehomework.protection.RSAGeneratorSpecImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -63,12 +66,25 @@ object AppModule {
     @Singleton
     @Provides
     fun provideAesKey(
-        @ApplicationContext context: Context
+        @ApplicationContext context: Context,
+        generatorParameterSpecRSA : IGeneratorParameterSpecRSA
     ) : IAesKey {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             AesKey()
         } else {
-            AesKeysSharedPreferences(context)
+            AesKeysSharedPreferences(context,generatorParameterSpecRSA )
+        }
+    }
+
+    @Singleton
+    @Provides
+    fun provideGeneratorParameterSpecRSA(
+        @ApplicationContext context: Context
+    ) : IGeneratorParameterSpecRSA {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            RSAGenEncryptSpecImpl()
+        } else {
+            RSAGeneratorSpecImpl(context)
         }
     }
 
